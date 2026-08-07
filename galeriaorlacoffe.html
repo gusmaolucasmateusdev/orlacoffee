@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria Orla Coffee</title>
+
+    <style>
+
+:root {
+    --bg-main: #ffffff;
+    --primary: #4A2C1D;
+    --primary-hover: #4A2C1D;
+
+    --text-main: #1a1a1a;
+    --text-soft: #555;
+    --text-muted: #888;
+
+    --border: #e5e5e5;
+}
+
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+}
+
+body{
+    background:var(--bg-main);
+    color:var(--text-main);
+    line-height:1.6;
+}
+
+/* HEADER */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 8%;
+
+    background:rgba(255,255,255,0.92);
+    backdrop-filter:blur(10px);
+
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    border-bottom:1px solid var(--border);
+}
+
+/* LOGO */
+.logo{
+    font-size:22px;
+    font-weight:900;
+
+    color:var(--primary);
+
+    letter-spacing:3px;
+    text-transform:uppercase;
+
+    text-decoration:none;
+}
+
+/* MENU */
+nav{
+    display:flex;
+    align-items:center;
+}
+
+nav a{
+    color:var(--text-soft);
+    text-decoration:none;
+
+    margin-left:20px;
+
+    font-size:13px;
+    font-weight:600;
+    text-transform:uppercase;
+
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:var(--primary);
+}
+
+/* SECTION */
+section{
+    padding:70px 8%;
+    text-align:center;
+}
+
+/* TÍTULO */
+h1{
+    font-size:32px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+
+    position:relative;
+    display:inline-block;
+
+    margin-bottom:50px;
+}
+
+/* LINHA LARANJA */
+h1::after{
+    content:'';
+
+    width:50px;
+    height:3px;
+
+    background:var(--primary);
+
+    position:absolute;
+
+    bottom:-12px;
+    left:50%;
+
+    transform:translateX(-50%);
+}
+
+/* GALERIA */
+.galeria-grid{
+    display:grid;
+
+    grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
+
+    gap:18px;
+}
+
+/* FOTO */
+.foto-item{
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:12px;
+
+    height:250px;
+
+    cursor:pointer;
+}
+
+/* IMAGEM */
+.foto-item img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:0.5s;
+}
+
+/* EFEITO HOVER */
+.foto-item:hover img{
+    transform:scale(1.08);
+}
+
+/* CRÉDITO */
+.foto-credito{
+    position:absolute;
+
+    bottom:0;
+    left:0;
+    right:0;
+
+    background:rgba(0,0,0,0.6);
+
+    color:#fff;
+
+    font-size:11px;
+
+    padding:6px 10px;
+
+    text-align:right;
+
+    opacity:0;
+    transform:translateY(100%);
+
+    transition:0.4s;
+}
+
+.foto-item:hover .foto-credito{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* FOOTER */
+footer{
+    margin-top:60px;
+
+    padding:40px;
+
+    text-align:center;
+
+    border-top:1px solid var(--border);
+
+    color:var(--text-muted);
+
+    font-size:14px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+    header{
+        padding:18px 6%;
+    }
+
+    .logo{
+        font-size:20px;
+    }
+
+    nav a{
+        margin-left:12px;
+        font-size:12px;
+    }
+
+    section{
+        padding:50px 6%;
+    }
+
+    h1{
+        font-size:24px;
+        line-height:1.4;
+    }
+
+    .galeria-grid{
+        grid-template-columns:1fr;
+    }
+
+    .foto-item{
+        height:230px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<nav>
+
+<a href="index.html">Início</a>
+
+</nav>
+
+</header>
+
+<section>
+    <h1>Galeria</h1>
+
+    <div class="galeria-grid">
+
+        <div class="foto-item"><img src="orlacoffee.jpg"><div class="foto-credito">@orlacoffee</div></div>
+        <div class="foto-item"><img src="1.jpeg"><div class="foto-credito">@orlacoffee</div></div>
+        <div class="foto-item"><img src="2.jpeg"><div class="foto-credito">@orlacoffee</div></div>
+        <div class="foto-item"><img src="3.jpeg"><div class="foto-credito">@orlacoffee</div></div>
+        <div class="foto-item"><img src="4.jpeg"><div class="foto-credito">@orlacoffee</div></div>
+        <div class="foto-item"><img src="5.jpeg"><div class="foto-credito">@orlacoffee</div></div>
+        <div class="foto-item"><img src="6.jpeg"><div class="foto-credito">@orlacoffee</div></div>
+        <div class="foto-item"><img src="7.jpeg"><div class="foto-credito">@orlacoffee</div></div>
+        <div class="foto-item"><img src="8.jpeg"><div class="foto-credito">@orlacoffee</div></div>
+        <div class="foto-item"><img src="9.jpeg"><div class="foto-credito">@orlacoffee</div></div>
+        <div class="foto-item"><img src="10.jpeg"><div class="foto-credito">@orlacoffee</div></div>
+        <div class="foto-item"><img src="11.jpeg"><div class="foto-credito">@orlacoffee</div></div>
+        <div class="foto-item"><img src="12.jpeg"><div class="foto-credito">@orlacoffee</div></div>
+        <div class="foto-item"><img src="13.jpeg"><div class="foto-credito">@orlacoffee</div></div>
+        <div class="foto-item"><img src="14.jpeg"><div class="foto-credito">@orlacoffee</div></div>
+        <div class="foto-item"><img src="15.jpeg"><div class="foto-credito">@orlacoffee</div></div>
+
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Orla Coffee. Desenvolvido pela <strong>Lucas Gusmão Dev</strong>.</p>
+</footer>
+
+</body>
+</html>
